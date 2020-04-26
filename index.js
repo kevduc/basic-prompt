@@ -1,26 +1,19 @@
-const stdin = process.stdin;
-const stdout = process.stdout;
-
-stdin.setEncoding("utf8").pause();
-stdout.setEncoding("utf8");
+const readline = require("readline");
+const input = process.stdin;
+const output = process.stdout;
 
 module.exports = async function prompt(message) {
-  stdout.write(message + " "); // add a space between the question and the cursor
-
-  let returnLine;
+  let returnAnswer = () => {};
 
   let answer = new Promise((resolve, reject) => {
-    returnLine = (line) => {
-      resolve(line.replace(/(\r\n|\n|\r)$/, "")); // remove line break
-    };
+    returnAnswer = (answer) => resolve(answer);
   });
 
-  stdin.once("data", (line) => {
-    stdin.pause();
-    returnLine(line);
+  const rl = readline.createInterface({ input, output });
+  rl.question(message + " ", (answer) => {
+    rl.close();
+    returnAnswer(answer);
   });
-
-  stdin.resume();
 
   return answer;
 };
