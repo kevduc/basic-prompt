@@ -1,0 +1,26 @@
+{
+  "name": "basic-prompt",
+  "version": "1.0.0",
+  "description": "Simple prompt for Node.js console applications.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevduc/basic-prompt.git"
+  },
+  "keywords": [
+    "javascript",
+    "nodejs",
+    "npm-package",
+    "prompt",
+    "basic-prompt"
+  ],
+  "author": "KevDuc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kevduc/basic-prompt/issues"
+  },
+  "homepage": "https://github.com/kevduc/basic-prompt#readme"
+}
