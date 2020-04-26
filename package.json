@@ -1,6 +1,6 @@
 {
   "name": "basic-prompt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple prompt for Node.js console applications.",
   "main": "index.js",
   "scripts": {
