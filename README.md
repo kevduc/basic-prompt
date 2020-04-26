@@ -1,2 +1,2 @@
 # basic-prompt
-Simple prompt for Node js console applications
+Simple prompt for Node.js console applications.
