@@ -1,11 +1,11 @@
-const stdin = process.stdin;
-const stdout = process.stdout;
+const input = process.stdin;
+const output = process.stdout;
 
-stdin.setEncoding("utf8").pause();
-stdout.setEncoding("utf8");
+input.setEncoding("utf8").pause();
+output.setEncoding("utf8");
 
 module.exports = async function prompt(message) {
-  stdout.write(message + " "); // add a space between the question and the cursor
+  output.write(message + " "); // add a space between the question and the cursor
 
   let returnLine;
 
@@ -15,12 +15,12 @@ module.exports = async function prompt(message) {
     };
   });
 
-  stdin.once("data", (line) => {
-    stdin.pause();
+  input.once("data", (line) => {
+    input.pause();
     returnLine(line);
   });
 
-  stdin.resume();
+  input.resume();
 
   return answer;
 };
