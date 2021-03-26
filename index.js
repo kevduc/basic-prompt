@@ -1,19 +1,12 @@
-const readline = require("readline");
-const input = process.stdin;
-const output = process.stdout;
+const readline = require('readline')
 
-module.exports = async function prompt(message) {
-  let returnAnswer = () => {};
+module.exports = async function prompt(message, input = process.stdin, output = process.stdout) {
+  const rl = readline.createInterface({ input, output })
 
-  let answer = new Promise((resolve, reject) => {
-    returnAnswer = (answer) => resolve(answer);
-  });
-
-  const rl = readline.createInterface({ input, output });
-  rl.question(message + " ", (answer) => {
-    rl.close();
-    returnAnswer(answer);
-  });
-
-  return answer;
-};
+  return new Promise((resolve, reject) => {
+    rl.question(message + ' ', (answer) => {
+      rl.close()
+      resolve(answer)
+    })
+  })
+}
