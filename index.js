@@ -10,7 +10,7 @@ module.exports = async function prompt(message) {
   });
 
   const rl = readline.createInterface({ input, output });
-  rl.question(message + " ", (answer) => {
+  rl.question(`${message} `, (answer) => {
     rl.close();
     returnAnswer(answer);
   });
