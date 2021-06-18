@@ -2,6 +2,8 @@
 
 \> Simple prompt for Node.js console applications.
 
+📦 Get it on npm: `npm i basic-prompt` [www.npmjs.com/package/basic-prompt](https://www.npmjs.com/package/basic-prompt)
+
 ## 👇 Example
 
 #### Code
