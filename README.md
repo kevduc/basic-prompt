@@ -1,8 +1,11 @@
 # basic-prompt
-Simple prompt for Node.js console applications.
 
-## Example
+\> Simple prompt for Node.js console applications.
+
+## 👇 Example
+
 #### Code
+
 ```javascript
 const prompt = require("basic-prompt");
 
@@ -11,7 +14,9 @@ const prompt = require("basic-prompt");
   console.log(`Your answer: ${answer}`)
 })()
 ```
+
 #### Result
+
 ```
 What's your answer? 42
 Your answer: 42
